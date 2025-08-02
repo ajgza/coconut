@@ -44,4 +44,15 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
+
+  .logo-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between logo and text */
+  }
+
+  .logo {
+    width: 50px; /* adjust based on your logo size */
+    height: auto;
+  }
   
