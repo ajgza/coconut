@@ -1,0 +1,38 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General body style */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px;
+  }
+  
+  /* Header styles */
+  h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
