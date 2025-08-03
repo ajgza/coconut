@@ -102,6 +102,16 @@
     font-weight: bold;
     margin-top: 20px;
   }
+
+  .error-banner {
+    background-color: #ea4a4a;
+    color: #dd5454;
+    padding: 12px 20px;
+    border: 1px solid #e29292;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
   
   #fileNamePreview {
     font-size: 0.95rem;
@@ -110,4 +120,11 @@
   }
   
   
-  
+  .resume-list {
+    text-align: left;
+    background: #e1f7ff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
