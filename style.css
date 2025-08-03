@@ -19,6 +19,7 @@
     font-size: 2.5rem;
     color: #222;
     margin-bottom: 20px;
+    margin: 0.67em 0;
   }
   
   /* Paragraphs */
@@ -54,5 +55,8 @@
   .logo {
     width: 70px; /* adjust based on your logo size */
     height: auto;
+    display: block;
+    box-sizing: content-box;
+    image-rendering: -webkit-optimize-contrast;
   }
   
