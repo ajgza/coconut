@@ -23,7 +23,8 @@
             <h2>Let’s see what the cat dragged in (your resume)</h2>
 
             <form id="uploadForm" enctype="multipart/form-data">
-                <input type="text" name="title" placeholder="Title" required>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;"></div>
+                <input type="text" name="title" placeholder="Give your resume a title" required>
                 <label class="cta-button upload-btn">
                 Upload
                     <input type="file" name="pdf" accept=".pdf" id="fileInput">
@@ -38,8 +39,10 @@
             <p id="uploadStatus"></p>    
         </section>
 
+        <section class="resume-title">
+            <h2>Resumes</h2>
+        </section>
         <section class="resume-list">
-            <h3>Resumes</h3>
             <ul id="uploadedFileList"></ul>
         </section>
 

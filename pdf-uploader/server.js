@@ -3,6 +3,7 @@ const multer = require('multer');
 const path = require('path');
 
 const app = express();
+const uploadedMetadata = []; // [{ file: 'filename.pdf', title: 'Custom Title' }]
 const PORT = 3000;
 
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +24,9 @@ app.use('/uploads', express.static('uploads')); // serve uploaded PDFs
 app.post('/upload', upload.single('pdf'), (req, res) => {
   const title = req.body.title || 'Untitled';
   const filePath = `/uploads/${req.file.originalname}`;
+  uploadedMetadata.push({file: req.file.originalname,
+    title: req.body.title || 'Untitled' });
+  console.log('Uploaded metadata:', uploadedMetadata);
   res.json({ 
     success: true,
     title, 
@@ -40,7 +44,19 @@ app.get('/uploaded-files', (req, res) => {
     }
     // Only return .pdf files
     const pdfFiles = files.filter(file => file.endsWith('.pdf'));
-    res.json(pdfFiles);
+    res.json(uploadedMetadata);;
+  });
+});
+
+app.delete('/delete-file', (req, res) => {
+  const filePath = path.join(__dirname, 'uploads', req.query.name);
+
+  fs.unlink(filePath, err => {
+    if (err) {
+      console.error('Delete error:', err);
+      return res.status(500).json({ success: false, error: 'File not found or cannot be deleted' });
+    }
+    res.json({ success: true });
   });
 });
 

@@ -46,16 +46,64 @@ window.addEventListener('DOMContentLoaded', async () => {
       const files = await response.json();
   
       if (Array.isArray(files) && files.length > 0) {
-        files.forEach(file => {
-          const link = document.createElement('a');
-          link.href = `/uploads/${file}`;
-          link.textContent = file;
-          link.target = '_blank';
-  
-          const listItem = document.createElement('li');
-          listItem.appendChild(link);
-          fileList.appendChild(listItem);
-        });
+        files.forEach(({ file, title }) => {
+            const listItem = document.createElement('li');
+            listItem.style.marginBottom = '20px';
+          
+            const topRow = document.createElement('div');
+            topRow.style.display = 'flex';
+            topRow.style.alignItems = 'center';
+            topRow.style.justifyContent = 'space-between';
+          
+            const link = document.createElement('a');
+            link.href = `/uploads/${file}`;
+            link.textContent = title || file;
+            link.target = '_blank';
+            link.style.flexGrow = '1';
+            link.style.fontWeight = 'bold';
+          
+            const trash = document.createElement('span');
+            trash.innerHTML = '🗑️';
+            trash.style.cursor = 'pointer';
+            trash.title = 'Delete';
+            trash.style.marginLeft = '10px';
+          
+            trash.addEventListener('click', async () => {
+              if (confirm(`Delete "${title}"?`)) {
+                const response = await fetch(`/delete-file?name=${encodeURIComponent(file)}`, {
+                  method: 'DELETE'
+                });
+          
+                const result = await response.json();
+          
+                if (result.success) {
+                  listItem.remove();
+                } else {
+                  alert('Failed to delete the file.');
+                }
+              }
+            });
+          
+            topRow.appendChild(link);
+            topRow.appendChild(trash);
+          
+            const preview = document.createElement('embed');
+            preview.src = `/uploads/${file}`;
+            preview.type = 'application/pdf';
+            preview.width = '100%';
+            preview.height = '400px';
+            preview.style.marginTop = '10px';
+          
+            listItem.appendChild(topRow);
+            listItem.appendChild(preview);
+            fileList.appendChild(listItem);
+          });
+          
+          
+          
+          
+            
+          
       } else {
         fileList.innerHTML = '<li>No PDFs uploaded yet.</li>';
       }
