@@ -1,0 +1,96 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General body style */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px;
+  }
+  
+  /* Header styles */
+  h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+    margin: 0.67em 0;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .hero {
+    text-align: center;
+    background: #a3e6ff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .features {
+    text-align: center;
+    background: #e1f7ff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .logo-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between logo and text */
+  }
+
+  .logo {
+    width: 70px; /* adjust based on your logo size */
+    height: auto;
+    display: block;
+    box-sizing: content-box;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  /*this is my Upload button */
+  .cta-button {
+    background-color: #4e8ed2;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* This is key for <label> */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Hover effect */
+  .cta-button:hover {
+    background-color: #8ab6e5;
+  }
+  
+  /* Hide the actual file input */
+  .upload-btn input[type="file"] {
+    display: none;
+  }
+  
+  
