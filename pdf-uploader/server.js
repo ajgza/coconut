@@ -19,9 +19,14 @@ app.use(express.static('public'));
 app.use('/uploads', express.static('uploads')); // serve uploaded PDFs
 
 app.post('/upload', upload.single('pdf'), (req, res) => {
-  res.send(`File uploaded: <a href="/uploads/${req.file.originalname}" target="_blank">${req.file.originalname}</a>`);
+  res.json({ success: true });
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
+
+
+
