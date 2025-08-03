@@ -37,9 +37,18 @@
     text-decoration: underline;
   }
   
-  section {
+  .hero {
     text-align: center;
     background: #a3e6ff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .features {
+    text-align: center;
+    background: #e1f7ff;
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -59,4 +68,21 @@
     box-sizing: content-box;
     image-rendering: -webkit-optimize-contrast;
   }
+
+  .cta-button {
+    background-color: #4a93e1;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .cta-button:hover {
+    background-color: #a3e6ff;
+  }
+  
   
