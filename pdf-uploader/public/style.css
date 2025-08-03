@@ -7,9 +7,12 @@
   
   /* General body style */
   body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f7f9fc;
-    color: #333;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #fff4f4;
+    color: #217f96;
     line-height: 1.6;
     padding: 40px;
   }
@@ -17,7 +20,7 @@
   /* Header styles */
   h1 {
     font-size: 2.5rem;
-    color: #222;
+    color: #217f96;
     margin-bottom: 20px;
     margin: 0.67em 0;
   }
@@ -30,7 +33,7 @@
   
   /* Links */
   a {
-    color: #407bbb;
+    color: #83bdc0;
     text-decoration: none;
   }
   a:hover {
@@ -39,16 +42,15 @@
   
   .hero {
     text-align: center;
-    background: #dfeff7;
+    background: #fff4f4;
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
 
   .features {
     text-align: center;
-    background: #e1f7ff;
+    background: #f0e1de;
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -68,24 +70,24 @@
     box-sizing: content-box;
     image-rendering: -webkit-optimize-contrast;
   }
-  /*this is my Upload button */
+  /*this is my Upload and submit buttons */
   .cta-button {
-    background-color: #4e8ed2;
+    background-color: #83bdc0;
     color: white;
-    padding: 12px 24px;
     font-size: 1rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: inline-block; /* This is key for <label> */
     text-align: center;
-    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 24px;
+
 
   }
 
   input[type="text"] {
-    padding: 10px;
+    padding: 8px;
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 8px;
@@ -93,6 +95,8 @@
     min-width: 200px;
     text-align: center;
     font-family: inherit;
+    margin-bottom: 16px;
+    margin-top: 16px;
 }
   
   /* Hover effect */
@@ -133,11 +137,12 @@
   
   .resume-title {
     text-align: center;
+    font-size: large;
   }
   
   .resume-list {
     text-align: center;
-    background: #e1f7ff;
+    background: #f0e1de;
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -181,3 +186,23 @@
   .icon-button:hover svg {
     stroke: #ff4444;
   }
+
+  /*this is for mu upload and submit buttons as well 
+  .button-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }*/
+
+  /* Specific to label (Upload) */
+.cta-upload {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-right: 10px;
+}
+
+/* Specific to button (Submit) */
+.cta-submit {
+  padding: 15.85px 24px;
+  display: inline-block;
+}

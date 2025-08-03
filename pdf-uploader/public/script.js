@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             
           
       } else {
-        fileList.innerHTML = '<li>No PDFs uploaded yet.</li>';
+        fileList.innerHTML = '<li>There are no resumes right meow</li>';
       }
     } catch (err) {
       console.error('Error loading uploaded PDFs:', err);

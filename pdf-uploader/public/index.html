@@ -4,6 +4,9 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <title>Jimmy Jobs</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -25,15 +28,16 @@
             <form id="uploadForm" enctype="multipart/form-data">
                 <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;"></div>
                 <input type="text" name="title" placeholder="Give your resume a title" required>
+                <div class="button-group"></div>
                 <label class="cta-button upload-btn">
                 Upload
                     <input type="file" name="pdf" accept=".pdf" id="fileInput">
                 </label>
-
+              
+              
+              <button type="submit" class="cta-button cta-submit">Submit</button>
+              </div>
               <p id="fileNamePreview"></p>
-              
-              
-              <button type="submit" class="cta-button">Submit</button>
             </form> 
 
             <p id="uploadStatus"></p>    
